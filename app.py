@@ -9,9 +9,9 @@ BASE = Path(__file__).resolve().parent
 
 @st.cache_resource
 def load_model():
-    model = joblib.load(BASE / "models/best_model.pkl")
-    prep = joblib.load(BASE / "models/preprocessor.pkl")
-    info = joblib.load(BASE / "models/split_info.pkl")
+    model = joblib.load(BASE / "best_model.pkl")
+    prep = joblib.load(BASE / "preprocessor.pkl")
+    info = joblib.load(BASE / "split_info.pkl")
     return model, prep, info
 
 model, prep, info = load_model()
